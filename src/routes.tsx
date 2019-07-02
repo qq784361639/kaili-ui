@@ -20,7 +20,7 @@ import DefaultSecondaryMasthead from './components/DefaultSecondaryMasthead/Defa
 const navItems: MenuItem[] = [
   {
     iconClass: icons.menu.overview,
-    title: 'Overview',
+    title: '∏≈¿¿',
     to: '/overview',
     pathsActive: [/^\/overview\/(.*)/]
   },
