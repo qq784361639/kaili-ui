@@ -20,43 +20,43 @@ import DefaultSecondaryMasthead from './components/DefaultSecondaryMasthead/Defa
 const navItems: MenuItem[] = [
   {
     iconClass: icons.menu.overview,
-    title: '����',
+    title: '概览',
     to: '/overview',
     pathsActive: [/^\/overview\/(.*)/]
   },
   {
     iconClass: icons.menu.graph,
-    title: 'Graph',
+    title: '图表',
     to: '/graph/namespaces/',
     pathsActive: [/^\/graph\/(.*)/]
   },
   {
     iconClass: icons.menu.applications,
-    title: 'Applications',
+    title: '应用',
     to: '/' + Paths.APPLICATIONS,
     pathsActive: [new RegExp('^/namespaces/(.*)/' + Paths.APPLICATIONS + '/(.*)')]
   },
   {
     iconClass: icons.menu.workloads,
-    title: 'Workloads',
+    title: '工作流量',
     to: '/' + Paths.WORKLOADS,
     pathsActive: [new RegExp('^/namespaces/(.*)/' + Paths.WORKLOADS + '/(.*)')]
   },
   {
     iconClass: icons.menu.services,
-    title: 'Services',
+    title: '服务',
     to: '/' + Paths.SERVICES,
     pathsActive: [new RegExp('^/namespaces/(.*)/' + Paths.SERVICES + '/(.*)')]
   },
   {
     iconClass: icons.menu.istioConfig,
-    title: 'Istio Config',
+    title: 'Istio配置',
     to: '/' + Paths.ISTIO,
     pathsActive: [new RegExp('^/namespaces/(.*)/' + Paths.ISTIO + '/(.*)')]
   },
   {
     iconClass: icons.menu.distributedTracing,
-    title: 'Distributed Tracing',
+    title: '分布式追踪',
     to: '/jaeger'
   }
 ];
