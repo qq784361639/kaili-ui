@@ -73,7 +73,7 @@ export class EmptyGraphLayout extends React.Component<EmptyGraphLayoutProps, Emp
       if (this.props.namespaces.length === 1) {
         return (
           <>
-            namespace <b>{this.props.namespaces[0].name}</b>
+            命名空间 <b>{this.props.namespaces[0].name}</b>
           </>
         );
       } else {
@@ -86,7 +86,7 @@ export class EmptyGraphLayout extends React.Component<EmptyGraphLayoutProps, Emp
           this.props.namespaces[this.props.namespaces.length - 1].name;
         return (
           <>
-            namespaces <b>{namespacesString}</b>
+            命名空间 <b>{namespacesString}</b>
           </>
         );
       }

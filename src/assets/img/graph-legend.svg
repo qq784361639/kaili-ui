@@ -300,7 +300,7 @@
     <tspan
        x="566.95782"
        y="16.004065"
-       id="tspan51">Edges</tspan>
+       id="tspan51">边</tspan>
   </text>
   <text
      y="25.775566"
@@ -388,7 +388,7 @@
     <tspan
        x="745.43591"
        y="16.227936"
-       id="tspan79">Traffic Animations</tspan>
+       id="tspan79">流量展示效果</tspan>
   </text>
   <g
      id="g1254"
@@ -571,7 +571,7 @@
        id="tspan2034"
        y="16.451801"
        x="422.27261"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans'">Node Background</tspan>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans'">节点图标</tspan>
   </text>
   <flowRoot
      xml:space="preserve"
