@@ -91,7 +91,7 @@ export default class SummaryPanelGraph extends React.Component<SummaryPanelPropT
     return (
       <div className="panel panel-default" style={SummaryPanelGraph.panelStyle}>
         <div className="panel-heading">
-          <strong>Namespace{this.props.namespaces.length > 1 ? 's' : ''}: </strong>
+          <strong>命名空间{this.props.namespaces.length > 1 ? 's' : ''}: </strong>
           {this.props.namespaces.map(namespace => namespace.name).join(', ')}
           {this.renderTopologySummary(numSvc, numWorkloads, numApps, numEdges)}
         </div>
@@ -208,7 +208,7 @@ export default class SummaryPanelGraph extends React.Component<SummaryPanelPropT
       </Link>
       <br />
       <br />
-      <strong>Current Graph:</strong>
+      <strong>当前图表:</strong>
       <br />
       {numApps > 0 && (
         <>
@@ -242,7 +242,7 @@ export default class SummaryPanelGraph extends React.Component<SummaryPanelPropT
 
   private renderRpsChart = () => {
     if (this.state.loading && !this.state.reqRates) {
-      return <strong>Loading chart...</strong>;
+      return <strong>正在加载图表...</strong>;
     } else if (this.state.metricsLoadError) {
       return (
         <div>
@@ -254,12 +254,8 @@ export default class SummaryPanelGraph extends React.Component<SummaryPanelPropT
 
     return (
       <>
-        <RpsChart
-          label="HTTP - Total Request Traffic"
-          dataRps={this.state.reqRates!}
-          dataErrors={this.state.errRates}
-        />
-        <TcpChart label="TCP - Total Traffic" receivedRates={this.state.tcpReceived} sentRates={this.state.tcpSent} />
+        <RpsChart label="HTTP - 总请求流量" dataRps={this.state.reqRates!} dataErrors={this.state.errRates} />
+        <TcpChart label="TCP - 总流量" receivedRates={this.state.tcpReceived} sentRates={this.state.tcpSent} />
       </>
     );
   };

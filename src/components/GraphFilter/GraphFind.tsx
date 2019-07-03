@@ -111,7 +111,7 @@ export class GraphFind extends React.PureComponent<GraphFindProps, GraphFindStat
                 onChange={this.updateFind}
                 defaultValue={this.state.findInputValue}
                 onKeyPress={this.checkSubmitFind}
-                placeholder="Find..."
+                placeholder="查找..."
               />
               {this.props.findValue && (
                 <OverlayTrigger
@@ -119,7 +119,7 @@ export class GraphFind extends React.PureComponent<GraphFindProps, GraphFindStat
                   placement="top"
                   trigger={['hover', 'focus']}
                   delayShow={1000}
-                  overlay={<Tooltip id="tt_clear_find">Clear Find...</Tooltip>}
+                  overlay={<Tooltip id="tt_clear_find">清除查找记录...</Tooltip>}
                 >
                   <InputGroup.Button>
                     <Button onClick={this.clearFind}>
@@ -140,7 +140,7 @@ export class GraphFind extends React.PureComponent<GraphFindProps, GraphFindStat
                 onChange={this.updateHide}
                 defaultValue={this.state.hideInputValue}
                 onKeyPress={this.checkSubmitHide}
-                placeholder="Hide..."
+                placeholder="隐藏..."
               />
               {this.props.hideValue && (
                 <OverlayTrigger
@@ -148,7 +148,7 @@ export class GraphFind extends React.PureComponent<GraphFindProps, GraphFindStat
                   placement="top"
                   trigger={['hover', 'focus']}
                   delayShow={1000}
-                  overlay={<Tooltip id="tt_clear_hide">Clear Hide...</Tooltip>}
+                  overlay={<Tooltip id="tt_clear_hide">清除隐藏记录...</Tooltip>}
                 >
                   <InputGroup.Button>
                     <Button onClick={this.clearHide}>
@@ -161,7 +161,7 @@ export class GraphFind extends React.PureComponent<GraphFindProps, GraphFindStat
             <OverlayTrigger
               key={'ot_graph_find_help'}
               placement="top"
-              overlay={<Tooltip id={'tt_graph_find_help'}>Find/Hide Help...</Tooltip>}
+              overlay={<Tooltip id={'tt_graph_find_help'}>查找/隐藏 帮助...</Tooltip>}
             >
               <Button bsStyle="link" style={{ paddingLeft: '6px' }} onClick={this.toggleFindHelp}>
                 <Icon name="help" type="pf" />

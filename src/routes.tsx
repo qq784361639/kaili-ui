@@ -38,7 +38,7 @@ const navItems: MenuItem[] = [
   },
   {
     iconClass: icons.menu.workloads,
-    title: '工作流量',
+    title: '工作负载',
     to: '/' + Paths.WORKLOADS,
     pathsActive: [new RegExp('^/namespaces/(.*)/' + Paths.WORKLOADS + '/(.*)')]
   },
