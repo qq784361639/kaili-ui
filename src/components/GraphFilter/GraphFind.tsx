@@ -315,7 +315,7 @@ export class GraphFind extends React.PureComponent<GraphFindProps, GraphFindStat
     const conjunctive = preparedVal.includes(' AND ');
     const disjunctive = preparedVal.includes(' OR ');
     if (conjunctive && disjunctive) {
-      return this.setErrorMsg(`Expression can not contain both 'AND' and 'OR'`);
+      return this.setErrorMsg(`表达式不能同时包含'AND'和'OR'`);
     }
     const separator = disjunctive ? ',' : '';
     const expressions = disjunctive ? preparedVal.split(' OR ') : preparedVal.split(' AND ');
@@ -393,17 +393,17 @@ export class GraphFind extends React.PureComponent<GraphFindProps, GraphFindStat
     }
     if (!op) {
       if (expression.split(' ').length > 1) {
-        return this.setErrorMsg(`No valid operator found in expression`);
+        return this.setErrorMsg(`表达式中未发现有效的操作对象`);
       }
 
       const unaryExpression = this.parseUnaryFindExpression(expression.trim(), false);
-      return unaryExpression ? unaryExpression : this.setErrorMsg(`Invalid Node or Edge operand`);
+      return unaryExpression ? unaryExpression : this.setErrorMsg(`无效的节点或边操作数`);
     }
 
     const tokens = expression.split(op);
     if (op === '!') {
       const unaryExpression = this.parseUnaryFindExpression(tokens[1].trim(), true);
-      return unaryExpression ? unaryExpression : this.setErrorMsg(`Invalid Node or Edge operand`);
+      return unaryExpression ? unaryExpression : this.setErrorMsg(`无效的节点或边操作数`);
     }
 
     const field = tokens[0].trim();

@@ -76,7 +76,7 @@ const InitializingScreen: React.FC<initializingScreenProps> = (props: initializi
                     <>
                       <p>
                         <a href="#" onClick={onClickHandler}>
-                          Show details
+                          展示细节
                         </a>
                       </p>
                       <hr />
@@ -89,7 +89,7 @@ const InitializingScreen: React.FC<initializingScreenProps> = (props: initializi
               ) : (
                 <>
                   <Spinner loading={true} />
-                  <h1>Initializing...</h1>
+                  <h1>初始化中...</h1>
                 </>
               )}
             </LoginCardHeader>

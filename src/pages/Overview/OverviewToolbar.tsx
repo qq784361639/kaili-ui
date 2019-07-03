@@ -164,7 +164,7 @@ export class OverviewToolbar extends React.Component<Props, State> {
           </ButtonGroup>
         </FormGroup>
         <ToolbarRightContent style={{ ...AlignRightStyle }}>
-          <DurationDropdownContainer id="overview-duration" disabled={false} tooltip={'Time range for overview data'} />
+          <DurationDropdownContainer id="overview-duration" disabled={false} tooltip={'概览数据的时间范围'} />
           <RefreshContainer id="overview-refresh" handleRefresh={this.props.onRefresh} hideLabel={true} />
         </ToolbarRightContent>
       </StatefulFilters>

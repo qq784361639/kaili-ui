@@ -91,7 +91,7 @@ export default class SummaryPanelGraph extends React.Component<SummaryPanelPropT
     return (
       <div className="panel panel-default" style={SummaryPanelGraph.panelStyle}>
         <div className="panel-heading">
-          <strong>命名空间{this.props.namespaces.length > 1 ? 's' : ''}: </strong>
+          <strong>命名空间: </strong>
           {this.props.namespaces.map(namespace => namespace.name).join(', ')}
           {this.renderTopologySummary(numSvc, numWorkloads, numApps, numEdges)}
         </div>
@@ -246,7 +246,7 @@ export default class SummaryPanelGraph extends React.Component<SummaryPanelPropT
     } else if (this.state.metricsLoadError) {
       return (
         <div>
-          <Icon type="pf" name="warning-triangle-o" /> <strong>Error loading metrics: </strong>
+          <Icon type="pf" name="warning-triangle-o" /> <strong>加载指标时出错: </strong>
           {this.state.metricsLoadError}
         </div>
       );

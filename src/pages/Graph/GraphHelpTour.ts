@@ -21,7 +21,7 @@ const GraphHelpTour: Array<StatefulStep> = [
     offset: 0,
     target: '#graph_filter_edge_labels',
     name: '边缘标签',
-    description: '选择要在节点之间的边缘上显示的信息。 Response times reflect the 95th percentile.'
+    description: '选择要在节点之间的边缘线上显示的信息。 Response times reflect the 95th percentile.'
   },
   {
     offset: 0,

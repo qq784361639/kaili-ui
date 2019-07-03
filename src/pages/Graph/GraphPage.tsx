@@ -305,8 +305,8 @@ export class GraphPage extends React.Component<GraphPageProps, GraphPageState> {
             <Breadcrumb title={true}>
               <Breadcrumb.Item active={true}>
                 {this.props.node && this.props.node.nodeType !== NodeType.UNKNOWN
-                  ? `Graph for ${this.props.node.nodeType}: ${this.getTitle(this.props.node)}`
-                  : 'Graph'}
+                  ? `${this.props.node.nodeType}: ${this.getTitle(this.props.node)}的图表`
+                  : '图表'}
                 <OverlayTrigger
                   key={'graph-tour-help-ot'}
                   placement="right"

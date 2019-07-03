@@ -65,7 +65,7 @@ export class GraphRefresh extends React.PureComponent<GraphRefreshProps> {
         <DurationDropdownContainer
           id={'graph_filter_duration'}
           disabled={this.props.disabled}
-          tooltip={'Time range for graph data'}
+          tooltip={'图表数据的时间范围'}
         />
         <ToolbarDropdown
           id="graph_refresh_dropdown"
@@ -74,7 +74,7 @@ export class GraphRefresh extends React.PureComponent<GraphRefreshProps> {
           value={this.props.refreshInterval}
           label={GraphRefresh.POLL_INTERVAL_LIST[this.props.refreshInterval]}
           options={GraphRefresh.POLL_INTERVAL_LIST}
-          tooltip={'Refresh interval for graph'}
+          tooltip={'图表的刷新时间间隔'}
         />
         <span className={GraphRefresh.refreshButtonStyle}>
           <Button id="refresh_button" onClick={this.props.handleRefresh} disabled={this.props.disabled}>
