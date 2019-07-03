@@ -292,7 +292,7 @@ export class OverviewPage extends React.Component<OverviewProps, State> {
     return (
       <>
         <Breadcrumb title={true}>
-          <Breadcrumb.Item active={true}>Namespaces</Breadcrumb.Item>
+          <Breadcrumb.Item active={true}>命名空间</Breadcrumb.Item>
         </Breadcrumb>
         <OverviewToolbarContainer
           onRefresh={this.load}
@@ -326,9 +326,9 @@ export class OverviewPage extends React.Component<OverviewProps, State> {
           </div>
         ) : (
           <EmptyState className={emptyStateStyle}>
-            <EmptyStateTitle>No unfiltered namespaces</EmptyStateTitle>
+            <EmptyStateTitle>无未筛选的命名空间</EmptyStateTitle>
             <EmptyStateInfo>
-              Either all namespaces are being filtered or the user has no permission to access namespaces.
+              要么正在筛选所有命名空间，要么用户没有访问命名空间的权限。
             </EmptyStateInfo>
           </EmptyState>
         )}

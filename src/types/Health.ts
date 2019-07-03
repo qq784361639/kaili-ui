@@ -37,28 +37,28 @@ export interface Status {
 }
 
 export const FAILURE: Status = {
-  name: 'Failure',
+  name: '失败',
   color: PfColors.Red100,
   priority: 3,
   icon: ErrorCircleOIcon,
   class: 'icon-failure'
 };
 export const DEGRADED: Status = {
-  name: 'Degraded',
+  name: '降级',
   color: PfColors.Orange400,
   priority: 2,
   icon: WarningTriangleIcon,
   class: 'icon-degraded'
 };
 export const HEALTHY: Status = {
-  name: 'Healthy',
+  name: '健康',
   color: PfColors.Green400,
   priority: 1,
   icon: OkIcon,
   class: 'icon-healthy'
 };
 export const NA: Status = {
-  name: 'No health information',
+  name: '无健康信息',
   color: PfColors.Gray,
   priority: 0,
   icon: UnknownIcon,

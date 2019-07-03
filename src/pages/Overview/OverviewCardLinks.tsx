@@ -17,12 +17,12 @@ class OverviewCardLinks extends React.Component<Props> {
   render() {
     return (
       <div style={{ marginTop: '10px' }}>
-        <OverlayTrigger key="ot_graph" placement="top" overlay={<Tooltip id="tt_graph">Go to graph</Tooltip>}>
+        <OverlayTrigger key="ot_graph" placement="top" overlay={<Tooltip id="tt_graph">前往图表页面</Tooltip>}>
           <Link to={`/graph/namespaces?namespaces=` + this.props.name}>
             <Icon type="pf" name="topology" className={iconStyle} />
           </Link>
         </OverlayTrigger>
-        <OverlayTrigger key="ot_apps" placement="top" overlay={<Tooltip id="tt_apps">Go to applications</Tooltip>}>
+        <OverlayTrigger key="ot_apps" placement="top" overlay={<Tooltip id="tt_apps">前往应用页面</Tooltip>}>
           <Link to={`/${Paths.APPLICATIONS}?namespaces=` + this.props.name}>
             <Icon type="pf" name="applications" className={iconStyle} />
           </Link>
@@ -30,18 +30,18 @@ class OverviewCardLinks extends React.Component<Props> {
         <OverlayTrigger
           key="ot_workloads"
           placement="top"
-          overlay={<Tooltip id="tt_workloads">Go to workloads</Tooltip>}
+          overlay={<Tooltip id="tt_workloads">前往工作流量页面</Tooltip>}
         >
           <Link to={`/${Paths.WORKLOADS}?namespaces=` + this.props.name}>
             <Icon type="pf" name="bundle" className={iconStyle} />
           </Link>
         </OverlayTrigger>
-        <OverlayTrigger key="ot_services" placement="top" overlay={<Tooltip id="tt_services">Go to services</Tooltip>}>
+        <OverlayTrigger key="ot_services" placement="top" overlay={<Tooltip id="tt_services">前往服务页面</Tooltip>}>
           <Link to={`/${Paths.SERVICES}?namespaces=` + this.props.name}>
             <Icon type="pf" name="service" className={iconStyle} />
           </Link>
         </OverlayTrigger>
-        <OverlayTrigger key="ot_istio" placement="top" overlay={<Tooltip id="tt_istio">Go to Istio config</Tooltip>}>
+        <OverlayTrigger key="ot_istio" placement="top" overlay={<Tooltip id="tt_istio">前往Istio配置页面</Tooltip>}>
           <Link to={`/${Paths.ISTIO}?namespaces=` + this.props.name}>
             <Icon type="pf" name="template" className={iconStyle} />
           </Link>
