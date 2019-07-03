@@ -23,9 +23,9 @@ class OverviewCardContent extends React.Component<Props> {
       status.inError.length + status.inWarning.length + status.inSuccess.length + status.notAvailable.length;
     let text: string;
     if (nbItems === 1) {
-      text = switchType(this.props.type, '1 应用', '1 服务', '1 工作量');
+      text = switchType(this.props.type, '1 应用', '1 服务', '1 工作负载');
     } else {
-      text = nbItems + switchType(this.props.type, ' 应用', ' 服务', ' 工作量');
+      text = nbItems + switchType(this.props.type, ' 应用', ' 服务', ' 工作负载');
     }
     return (
       <>

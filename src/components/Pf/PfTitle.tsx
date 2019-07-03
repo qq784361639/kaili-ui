@@ -96,7 +96,7 @@ class PfTitle extends React.Component<PfTitleProps, PfTitleState> {
         )}
         {this.state.name && (
           <>
-            {'  '}(<Link to={this.showOnGraphLink()}>Show on graph</Link>)
+            {'  '}(<Link to={this.showOnGraphLink()}>显示图表信息</Link>)
           </>
         )}
       </h2>

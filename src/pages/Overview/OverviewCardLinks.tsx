@@ -30,7 +30,7 @@ class OverviewCardLinks extends React.Component<Props> {
         <OverlayTrigger
           key="ot_workloads"
           placement="top"
-          overlay={<Tooltip id="tt_workloads">前往工作流量页面</Tooltip>}
+          overlay={<Tooltip id="tt_workloads">前往工作负载页面</Tooltip>}
         >
           <Link to={`/${Paths.WORKLOADS}?namespaces=` + this.props.name}>
             <Icon type="pf" name="bundle" className={iconStyle} />

@@ -85,11 +85,11 @@ class TrafficDetails extends React.Component<TrafficDetailsProps, TrafficDetails
               <MetricsDurationContainer onChanged={this.props.onDurationChanged} />{' '}
               <RefreshButtonContainer handleRefresh={this.props.onRefresh} />
             </div>
-            <strong>Inbound</strong>
+            <strong>入站</strong>
           </div>
           <DetailedTrafficList direction="inbound" traffic={this.state.inboundTraffic} />
           <div style={{ marginTop: '2em' }}>
-            <strong>Outbound</strong>
+            <strong>出站</strong>
           </div>
           <DetailedTrafficList direction="outbound" traffic={this.state.outboundTraffic} />
         </Col>

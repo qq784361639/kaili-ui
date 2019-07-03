@@ -179,7 +179,7 @@ export class ServiceHealth extends Health {
       const reqErrorsRatio = getRequestErrorsStatus(requests.errorRatio);
       const reqErrorsText = reqErrorsRatio.status === NA ? 'No requests' : reqErrorsRatio.value.toFixed(2) + '%';
       const item: HealthItem = {
-        title: 'Error Rate over ' + getName(ctx.rateInterval).toLowerCase(),
+        title: getName(ctx.rateInterval) + '的错误比率',
         status: reqErrorsRatio.status,
         text: reqErrorsText
       };
@@ -223,7 +223,7 @@ export class AppHealth extends Health {
       });
       const podsStatus = children.map(i => i.status).reduce((prev, cur) => mergeStatus(prev, cur), NA);
       const item: HealthItem = {
-        title: 'Pods Status',
+        title: 'Pods状态',
         status: podsStatus,
         children: children
       };
@@ -239,7 +239,7 @@ export class AppHealth extends Health {
       const reqOut = getRequestErrorsStatus(requests.outboundErrorRatio);
       const both = mergeStatus(reqIn.status, reqOut.status);
       const item: HealthItem = {
-        title: 'Error Rate over ' + getName(ctx.rateInterval).toLowerCase(),
+        title: getName(ctx.rateInterval) + '的错误比率',
         status: both,
         children: [getRequestErrorsSubItem(reqIn, 'Inbound'), getRequestErrorsSubItem(reqOut, 'Outbound')]
       };
@@ -271,7 +271,7 @@ export class WorkloadHealth extends Health {
         workloadStatus.desiredReplicas
       );
       const item: HealthItem = {
-        title: 'Pods Status',
+        title: 'Pods状态',
         status: podsStatus,
         text: String(workloadStatus.availableReplicas + ' / ' + workloadStatus.desiredReplicas)
       };
@@ -305,7 +305,7 @@ export class WorkloadHealth extends Health {
       const reqOut = getRequestErrorsStatus(requests.outboundErrorRatio);
       const both = mergeStatus(reqIn.status, reqOut.status);
       const item: HealthItem = {
-        title: 'Error Rate over ' + getName(ctx.rateInterval).toLowerCase(),
+        title: getName(ctx.rateInterval) + '的错误比率',
         status: both,
         children: [getRequestErrorsSubItem(reqIn, 'Inbound'), getRequestErrorsSubItem(reqOut, 'Outbound')]
       };

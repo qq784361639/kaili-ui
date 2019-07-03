@@ -13,7 +13,7 @@ import {
 export const sortFields: GenericSortField<AppListItem>[] = [
   {
     id: 'namespace',
-    title: 'Namespace',
+    title: '命名空间',
     isNumeric: false,
     param: 'ns',
     compare: (a, b) => {
@@ -26,7 +26,7 @@ export const sortFields: GenericSortField<AppListItem>[] = [
   },
   {
     id: 'appname',
-    title: 'App Name',
+    title: '应用名称',
     isNumeric: false,
     param: 'wn',
     compare: (a, b) => a.name.localeCompare(b.name)
@@ -48,7 +48,7 @@ export const sortFields: GenericSortField<AppListItem>[] = [
   },
   {
     id: 'health',
-    title: 'Health',
+    title: '健康',
     isNumeric: false,
     param: 'he',
     compare: (a: WithAppHealth<AppListItem>, b: WithAppHealth<AppListItem>) => {
@@ -69,8 +69,8 @@ export const sortFields: GenericSortField<AppListItem>[] = [
 
 const appNameFilter: FilterType = {
   id: 'appname',
-  title: 'App Name',
-  placeholder: 'Filter by App Name',
+  title: '应用名称',
+  placeholder: '按应用名称筛选',
   filterType: 'text',
   action: FILTER_ACTION_APPEND,
   filterValues: []
@@ -128,7 +128,7 @@ export const sortAppsItems = (
   sortField: GenericSortField<AppListItem>,
   isAscending: boolean
 ): Promise<AppListItem[]> => {
-  if (sortField.title === 'Health') {
+  if (sortField.title === '健康') {
     // In the case of health sorting, we may not have all health promises ready yet
     // So we need to get them all before actually sorting
     const allHealthPromises: Promise<WithAppHealth<AppListItem>>[] = unsorted.map(item => {
